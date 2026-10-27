@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		015A9B4630E92068BD4BA0A4 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B41467775423C980ECF8D06 /* GameScene.swift */; };
+		05D5DE116DFE4712D647E096 /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1627D7A7798006806E2E5EA8 /* CardTests.swift */; };
+		09AD94064DF872A6BD32D336 /* GameConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBE62F77A57A49A9CD8F673 /* GameConfigTests.swift */; };
+		12AD8330E667B36BB35B61F2 /* GameConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A48A8FCD707A4917D3C9E3E /* GameConfig.swift */; };
+		263935796C3E86ABB364426E /* SlingshotNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F42186EEA70D08C360C6B5 /* SlingshotNode.swift */; };
+		2ACBDD56F510F9EFD3F4C68C /* CardTrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA950529218629A0B785DA5B /* CardTrayView.swift */; };
+		2B46B069BE7C8A4AFD851A7B /* TrajectoryMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5D110A821E6D521C7C6E0F /* TrajectoryMathTests.swift */; };
+		4492FAA565AE7B7A9AAF8300 /* NetworkPacketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218675F070E8E16327B00880 /* NetworkPacketTests.swift */; };
+		4A1850FB1F1D8EC1BFCF5228 /* PlacementZoneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC4244BF23673BA9CF86653 /* PlacementZoneNode.swift */; };
+		4D959F7487DDF6527BE63598 /* TowerSlotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD74693EA6A1FA9D8E6D12C /* TowerSlotTests.swift */; };
+		4DC9AF88C3E1F24A70FB7D51 /* TrajectoryMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7709E30B4972F4451776352B /* TrajectoryMath.swift */; };
+		5140DDE06EAB14DFB9FEC17A /* PlayerAndTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48E21EC699BAE28BA918EC2 /* PlayerAndTower.swift */; };
+		5145E474055E7B94F04A371A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC7AC1F4D0DE4314C646D0B /* ContentView.swift */; };
+		531BC44D77EF351ED0042F3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E28586AADC59390D8B57EB3 /* Assets.xcassets */; };
+		5B24DD18596E02BF0493D610 /* AIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792D8CDEB6B84C8BC9EC5203 /* AIController.swift */; };
+		6CA24FE6806DAE40618F0E51 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813F4F1E783E5B01F5A51E60 /* GameView.swift */; };
+		7AE7E064EB36687B62E1CB80 /* GamePacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542AC5692832FE90D55539B0 /* GamePacket.swift */; };
+		81A3D112B7448C01207A9A8A /* CastleAttackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF601E01BBDA6C9BA9925BA9 /* CastleAttackApp.swift */; };
+		827EE4435BA6524F9C8DD026 /* TowerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA47D3754A2338241CAE264 /* TowerNode.swift */; };
+		8438C8E5FAE623BBC2DF0569 /* ParticleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE54A862DB993F234732120 /* ParticleFactory.swift */; };
+		89EFFB04A0030E5A1E9E8658 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139B013DE4C723EF5DA15277 /* LobbyView.swift */; };
+		8D2E1CCE2F52A686EDC7C9D2 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36B97B0EE87AEB2AB2F45FA /* Card.swift */; };
+		8F954A183B3C5D5F8B6C51ED /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C967CC97CE199E1E2084589 /* GameOverView.swift */; };
+		A4089C8D475428E476D31E74 /* ArenaBackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98D5B4084C3B14C22578FAB1 /* ArenaBackgroundNode.swift */; };
+		C9AAEAB8B8E69D954030CE3F /* ProjectileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 722EA53E88B7C24D12A3AEB6 /* ProjectileNode.swift */; };
+		D1B37AA2CEC118D938F1FBD0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E1A4278F9E607E438F6707 /* NetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F3449C1346EED073215A6CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73632D2BD2047CD9D137D7F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACD2CD496FD1CA31326C4E38;
+			remoteInfo = CastleAttack;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		139B013DE4C723EF5DA15277 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
+		1627D7A7798006806E2E5EA8 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
+		218675F070E8E16327B00880 /* NetworkPacketTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPacketTests.swift; sourceTree = "<group>"; };
+		2A48A8FCD707A4917D3C9E3E /* GameConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfig.swift; sourceTree = "<group>"; };
+		2C967CC97CE199E1E2084589 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		3D5D110A821E6D521C7C6E0F /* TrajectoryMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryMathTests.swift; sourceTree = "<group>"; };
+		3FC4244BF23673BA9CF86653 /* PlacementZoneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementZoneNode.swift; sourceTree = "<group>"; };
+		4B41467775423C980ECF8D06 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		4E28586AADC59390D8B57EB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		542AC5692832FE90D55539B0 /* GamePacket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePacket.swift; sourceTree = "<group>"; };
+		6AD74693EA6A1FA9D8E6D12C /* TowerSlotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerSlotTests.swift; sourceTree = "<group>"; };
+		722EA53E88B7C24D12A3AEB6 /* ProjectileNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectileNode.swift; sourceTree = "<group>"; };
+		7709E30B4972F4451776352B /* TrajectoryMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrajectoryMath.swift; sourceTree = "<group>"; };
+		792D8CDEB6B84C8BC9EC5203 /* AIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIController.swift; sourceTree = "<group>"; };
+		813F4F1E783E5B01F5A51E60 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		8EC7AC1F4D0DE4314C646D0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		98D5B4084C3B14C22578FAB1 /* ArenaBackgroundNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArenaBackgroundNode.swift; sourceTree = "<group>"; };
+		9FBE62F77A57A49A9CD8F673 /* GameConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigTests.swift; sourceTree = "<group>"; };
+		A1AF8CDCA4459499473FAAE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B36B97B0EE87AEB2AB2F45FA /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B3E1A4278F9E607E438F6707 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B48E21EC699BAE28BA918EC2 /* PlayerAndTower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAndTower.swift; sourceTree = "<group>"; };
+		B6D4DEE9D4D9C189BC8309C9 /* CastleAttackTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = CastleAttackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9F42186EEA70D08C360C6B5 /* SlingshotNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlingshotNode.swift; sourceTree = "<group>"; };
+		CEA09361C48085EB4E55AB9B /* CastleAttack.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CastleAttack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF601E01BBDA6C9BA9925BA9 /* CastleAttackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastleAttackApp.swift; sourceTree = "<group>"; };
+		DA950529218629A0B785DA5B /* CardTrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTrayView.swift; sourceTree = "<group>"; };
+		FEA47D3754A2338241CAE264 /* TowerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerNode.swift; sourceTree = "<group>"; };
+		FFE54A862DB993F234732120 /* ParticleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticleFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0B7E9369FBD0F425E37A3D4A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				792D8CDEB6B84C8BC9EC5203 /* AIController.swift */,
+				98D5B4084C3B14C22578FAB1 /* ArenaBackgroundNode.swift */,
+				4B41467775423C980ECF8D06 /* GameScene.swift */,
+				FFE54A862DB993F234732120 /* ParticleFactory.swift */,
+				3FC4244BF23673BA9CF86653 /* PlacementZoneNode.swift */,
+				722EA53E88B7C24D12A3AEB6 /* ProjectileNode.swift */,
+				B9F42186EEA70D08C360C6B5 /* SlingshotNode.swift */,
+				FEA47D3754A2338241CAE264 /* TowerNode.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		0E1817A78C2AE9988839C525 /* CastleAttackTests */ = {
+			isa = PBXGroup;
+			children = (
+				1627D7A7798006806E2E5EA8 /* CardTests.swift */,
+				9FBE62F77A57A49A9CD8F673 /* GameConfigTests.swift */,
+				218675F070E8E16327B00880 /* NetworkPacketTests.swift */,
+				6AD74693EA6A1FA9D8E6D12C /* TowerSlotTests.swift */,
+				3D5D110A821E6D521C7C6E0F /* TrajectoryMathTests.swift */,
+			);
+			path = CastleAttackTests;
+			sourceTree = "<group>";
+		};
+		3B61B82466A7BEF40C9697D9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				542AC5692832FE90D55539B0 /* GamePacket.swift */,
+				B3E1A4278F9E607E438F6707 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		40CC8FF2ACB8C5BF584B29E4 /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				7709E30B4972F4451776352B /* TrajectoryMath.swift */,
+			);
+			path = Physics;
+			sourceTree = "<group>";
+		};
+		7E72DF7FBE4A2104B42F2747 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DA950529218629A0B785DA5B /* CardTrayView.swift */,
+				8EC7AC1F4D0DE4314C646D0B /* ContentView.swift */,
+				2C967CC97CE199E1E2084589 /* GameOverView.swift */,
+				813F4F1E783E5B01F5A51E60 /* GameView.swift */,
+				139B013DE4C723EF5DA15277 /* LobbyView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B785CAAE0E6E10C3619EC9BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEA09361C48085EB4E55AB9B /* CastleAttack.app */,
+				B6D4DEE9D4D9C189BC8309C9 /* CastleAttackTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0CE558EE9299F2C8F4CDC24 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CF601E01BBDA6C9BA9925BA9 /* CastleAttackApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E8A8E2284F89E475A8C7E1E2 = {
+			isa = PBXGroup;
+			children = (
+				0E1817A78C2AE9988839C525 /* CastleAttackTests */,
+				EC98CF5E17149B9F09EFBC39 /* Resources */,
+				F9BC6476506D3E1AD89FD18F /* Sources */,
+				B785CAAE0E6E10C3619EC9BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC98CF5E17149B9F09EFBC39 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E28586AADC59390D8B57EB3 /* Assets.xcassets */,
+				A1AF8CDCA4459499473FAAE6 /* Info.plist */,
+			);
+			name = Resources;
+			path = CastleAttack/Resources;
+			sourceTree = "<group>";
+		};
+		F9BC6476506D3E1AD89FD18F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E0CE558EE9299F2C8F4CDC24 /* App */,
+				0B7E9369FBD0F425E37A3D4A /* Game */,
+				FD34A3FED92BD261103EE2FD /* Models */,
+				3B61B82466A7BEF40C9697D9 /* Networking */,
+				40CC8FF2ACB8C5BF584B29E4 /* Physics */,
+				7E72DF7FBE4A2104B42F2747 /* UI */,
+			);
+			name = Sources;
+			path = CastleAttack/Sources;
+			sourceTree = "<group>";
+		};
+		FD34A3FED92BD261103EE2FD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B36B97B0EE87AEB2AB2F45FA /* Card.swift */,
+				2A48A8FCD707A4917D3C9E3E /* GameConfig.swift */,
+				B48E21EC699BAE28BA918EC2 /* PlayerAndTower.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		150FA61CD26A23F44B7BAB6C /* CastleAttackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9425FB9835C793A1CAB8578 /* Build configuration list for PBXNativeTarget "CastleAttackTests" */;
+			buildPhases = (
+				308DDBD608062FCC8A9F3D6B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9069F5ADEEDFAAC55AF9F9C0 /* PBXTargetDependency */,
+			);
+			name = CastleAttackTests;
+			packageProductDependencies = (
+			);
+			productName = CastleAttackTests;
+			productReference = B6D4DEE9D4D9C189BC8309C9 /* CastleAttackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACD2CD496FD1CA31326C4E38 /* CastleAttack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 670BD32433BF4BAE306C83B9 /* Build configuration list for PBXNativeTarget "CastleAttack" */;
+			buildPhases = (
+				446712C5F0D52B544AA206D1 /* Sources */,
+				C237BEBD3CBC437C55CCB363 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CastleAttack;
+			packageProductDependencies = (
+			);
+			productName = CastleAttack;
+			productReference = CEA09361C48085EB4E55AB9B /* CastleAttack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73632D2BD2047CD9D137D7F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					150FA61CD26A23F44B7BAB6C = {
+						DevelopmentTeam = V435TGDS6R;
+						ProvisioningStyle = Automatic;
+					};
+					ACD2CD496FD1CA31326C4E38 = {
+						DevelopmentTeam = V435TGDS6R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 536C4C64B1FCCA86C9046E15 /* Build configuration list for PBXProject "CastleAttack" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = E8A8E2284F89E475A8C7E1E2;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B785CAAE0E6E10C3619EC9BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACD2CD496FD1CA31326C4E38 /* CastleAttack */,
+				150FA61CD26A23F44B7BAB6C /* CastleAttackTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C237BEBD3CBC437C55CCB363 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531BC44D77EF351ED0042F3F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		308DDBD608062FCC8A9F3D6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05D5DE116DFE4712D647E096 /* CardTests.swift in Sources */,
+				09AD94064DF872A6BD32D336 /* GameConfigTests.swift in Sources */,
+				4492FAA565AE7B7A9AAF8300 /* NetworkPacketTests.swift in Sources */,
+				4D959F7487DDF6527BE63598 /* TowerSlotTests.swift in Sources */,
+				2B46B069BE7C8A4AFD851A7B /* TrajectoryMathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		446712C5F0D52B544AA206D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B24DD18596E02BF0493D610 /* AIController.swift in Sources */,
+				A4089C8D475428E476D31E74 /* ArenaBackgroundNode.swift in Sources */,
+				8D2E1CCE2F52A686EDC7C9D2 /* Card.swift in Sources */,
+				2ACBDD56F510F9EFD3F4C68C /* CardTrayView.swift in Sources */,
+				81A3D112B7448C01207A9A8A /* CastleAttackApp.swift in Sources */,
+				5145E474055E7B94F04A371A /* ContentView.swift in Sources */,
+				12AD8330E667B36BB35B61F2 /* GameConfig.swift in Sources */,
+				8F954A183B3C5D5F8B6C51ED /* GameOverView.swift in Sources */,
+				7AE7E064EB36687B62E1CB80 /* GamePacket.swift in Sources */,
+				015A9B4630E92068BD4BA0A4 /* GameScene.swift in Sources */,
+				6CA24FE6806DAE40618F0E51 /* GameView.swift in Sources */,
+				89EFFB04A0030E5A1E9E8658 /* LobbyView.swift in Sources */,
+				D1B37AA2CEC118D938F1FBD0 /* NetworkManager.swift in Sources */,
+				8438C8E5FAE623BBC2DF0569 /* ParticleFactory.swift in Sources */,
+				4A1850FB1F1D8EC1BFCF5228 /* PlacementZoneNode.swift in Sources */,
+				5140DDE06EAB14DFB9FEC17A /* PlayerAndTower.swift in Sources */,
+				C9AAEAB8B8E69D954030CE3F /* ProjectileNode.swift in Sources */,
+				263935796C3E86ABB364426E /* SlingshotNode.swift in Sources */,
+				827EE4435BA6524F9C8DD026 /* TowerNode.swift in Sources */,
+				4DC9AF88C3E1F24A70FB7D51 /* TrajectoryMath.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9069F5ADEEDFAAC55AF9F9C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACD2CD496FD1CA31326C4E38 /* CastleAttack */;
+			targetProxy = 1F3449C1346EED073215A6CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		270BD4DCF1F37C84CF31FD8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CastleAttack/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakhul.castleattack.game;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4361F8EEB7D92DBF5A564C87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = V435TGDS6R;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		75EC70D1934CB2004B7A05DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = CastleAttack/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakhul.castleattack.game;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8BFDA17B693F6DDB00E7C117 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = V435TGDS6R;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6345F242DFA2C750BBFEB8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakhul.castleattack.gameTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CastleAttack.app/CastleAttack";
+			};
+			name = Debug;
+		};
+		F7059A51278F57B406CCF0F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = YES;
+				CODE_SIGNING_REQUIRED = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nakhul.castleattack.gameTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CastleAttack.app/CastleAttack";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		536C4C64B1FCCA86C9046E15 /* Build configuration list for PBXProject "CastleAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BFDA17B693F6DDB00E7C117 /* Debug */,
+				4361F8EEB7D92DBF5A564C87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		670BD32433BF4BAE306C83B9 /* Build configuration list for PBXNativeTarget "CastleAttack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				270BD4DCF1F37C84CF31FD8E /* Debug */,
+				75EC70D1934CB2004B7A05DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E9425FB9835C793A1CAB8578 /* Build configuration list for PBXNativeTarget "CastleAttackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6345F242DFA2C750BBFEB8B /* Debug */,
+				F7059A51278F57B406CCF0F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 73632D2BD2047CD9D137D7F0 /* Project object */;
+}

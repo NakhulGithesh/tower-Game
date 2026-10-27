@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#0b0e14">
+    <title>Castle Attack - Mobile Web Edition</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #05070a;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            touch-action: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #app-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            max-width: 500px;
+            max-height: 950px;
+            background: #0d1117;
+            overflow: hidden;
+            box-shadow: 0 0 35px rgba(0, 0, 0, 0.85);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            touch-action: none;
+        }
+
+        /* Top HUD Bar */
+        #top-hud {
+            position: absolute;
+            top: env(safe-area-inset-top, 10px);
+            left: 12px;
+            right: 12px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        .hud-pill {
+            background: rgba(12, 16, 24, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            padding: 5px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            pointer-events: auto;
+        }
+
+        .team-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px currentColor;
+        }
+        .team-blue { background: #2563eb; color: #3b82f6; }
+        .team-red { background: #dc2626; color: #ef4444; }
+
+        .btn-icon {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        .btn-icon:active {
+            transform: scale(0.92);
+        }
+
+        /* Modal Overlays (Lobby, Waiting, Victory) */
+        .modal-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(5, 8, 14, 0.88);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            padding: 24px;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+        .modal-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .title-badge {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            margin-bottom: 24px;
+        }
+
+        .action-card {
+            width: 100%;
+            max-width: 320px;
+            background: rgba(22, 28, 42, 0.95);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-main {
+            background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+            border: none;
+            color: #000;
+            font-size: 16px;
+            font-weight: 900;
+            border-radius: 14px;
+            padding: 15px 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.5);
+            transition: transform 0.1s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .btn-main:active {
+            transform: scale(0.96);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 14px;
+            padding: 13px 18px;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .btn-secondary:active {
+            background: rgba(255, 255, 255, 0.16);
+            transform: scale(0.97);
+        }
+
+        .pulse-orb {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #38bdf8 0%, #0284c7 70%);
+            margin: 0 auto 16px;
+            animation: pulse-ring 1.8s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 26px;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
+            70% { transform: scale(1.08); box-shadow: 0 0 0 20px rgba(56, 189, 248, 0); }
+            100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+        }
+
+        /* Banner Notification at Bottom */
+        #notification-banner {
+            position: absolute;
+            bottom: calc(env(safe-area-inset-bottom, 12px) + 140px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(15, 20, 30, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.25s, transform 0.25s;
+            z-index: 30;
+            white-space: nowrap;
+        }
+        #notification-banner.visible {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="app-container">
+        <!-- Main Interactive 2D Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- Top Navigation / Connection HUD -->
+        <div id="top-hud">
+            <div class="hud-pill" id="hud-status">
+                <span class="team-dot team-blue" id="hud-team-dot"></span>
+                <span id="hud-role-text">ONLINE ARENA</span>
+            </div>
+            
+            <div style="display: flex; gap: 8px;">
+                <button class="btn-icon" id="btn-solo-toggle" title="Practice against Solo Bot">🤖</button>
+                <button class="btn-icon" id="btn-mute-toggle" title="Sound Mute">🔊</button>
+            </div>
+        </div>
+
+        <!-- Notification Banner -->
+        <div id="notification-banner">TOWERS LOCKED IN</div>
+
+        <!-- Waiting For Opponent Modal -->
+        <div class="modal-overlay hidden" id="modal-waiting">
+            <div class="pulse-orb">🛡️</div>
+            <h2 class="title-badge" id="waiting-title">ARENA READY</h2>
+            <p class="subtitle" id="waiting-subtitle">Assigned: PLAYER A (ROYAL BLUE)<br>Waiting for Player B to join...</p>
+            <div class="action-card">
+                <div style="font-size: 12px; color: #94a3b8; line-height: 1.5;">
+                    Share this URL or connect another phone on the same Wi-Fi / tunnel to battle in real-time.
+                </div>
+                <button class="btn-secondary" id="btn-switch-solo">PLAY VS AI INSTEAD</button>
+            </div>
+        </div>
+
+        <!-- Game Over Modal -->
+        <div class="modal-overlay hidden" id="modal-gameover">
+            <h1 class="title-badge" id="gameover-title">VICTORY!</h1>
+            <p class="subtitle" id="gameover-subtitle">Crown Champion of the Arena</p>
+            <div class="action-card">
+                <button class="btn-main" id="btn-play-again">PLAY AGAIN</button>
+                <button class="btn-secondary" id="btn-rematch-solo">SOLO PRACTICE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Procedural Synthesizer & Canvas Game -->
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

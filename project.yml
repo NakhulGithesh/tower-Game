@@ -1,0 +1,64 @@
+name: CastleAttack
+options:
+  bundleIdPrefix: com.castleattack
+  deploymentTarget:
+    iOS: "16.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    DEVELOPMENT_TEAM: "V435TGDS6R"
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+    CODE_SIGNING_REQUIRED: "NO"
+    CODE_SIGNING_ALLOWED: "YES"
+
+targets:
+  CastleAttack:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: CastleAttack/Sources
+      - path: CastleAttack/Resources
+    info:
+      path: CastleAttack/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: "Castle Attack"
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        NSLocalNetworkUsageDescription: "Castle Attack connects to local or remote WebSocket servers for real-time multiplayer battles."
+        UIRequiresFullScreen: true
+        UIStatusBarHidden: true
+        UIViewControllerBasedStatusBarAppearance: false
+        UISupportedInterfaceOrientations:
+          - "UIInterfaceOrientationPortrait"
+        UISupportedInterfaceOrientations~ipad:
+          - "UIInterfaceOrientationPortrait"
+        UILaunchScreen: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nakhul.castleattack.game
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: "1.0"
+
+  CastleAttackTests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - path: CastleAttackTests
+    dependencies:
+      - target: CastleAttack
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nakhul.castleattack.gameTests
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_IDENTITY: "Apple Development"
+        CODE_SIGNING_REQUIRED: "YES"
+        CODE_SIGNING_ALLOWED: "YES"
+
